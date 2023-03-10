@@ -186,7 +186,7 @@ export default function Home() {
 						/>
 					</div> */}
 
-					<div className="mb-4">
+					{/* <div className="mb-4">
 						<label
 							htmlFor="mxsides"
 							className="block text-gray-700 font-bold mb-2"
@@ -216,7 +216,7 @@ export default function Home() {
 							setState={setClassList}
 							state={classList}
 						/>
-					</div>
+					</div> */}
 
 					<div className="mb-4">
 						<label
@@ -235,8 +235,8 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className="flex-grow flex flex-col items-center justify-center h-screen w-full">
-				<form className="bg-white p-10 rounded shadow-lg max-w-3xl w-full mx-auto">
+			<div className="flex-grow flex box-border flex-col items-center justify-center h-screen w-full">
+				<form className="bg-white box-border p-10 rounded shadow-lg max-w-3xl w-full mx-auto">
 					<Input
 						id={'firstName'}
 						name={'firstName'}

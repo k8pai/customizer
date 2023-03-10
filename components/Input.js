@@ -13,17 +13,18 @@ const Input = ({
 }) => {
 	// console.log(className);
 	const [valid, setValid] = useState(false);
-	const defaults = `box-border w-full border-gray-400 transition duration-75 font-bold tracking-wider text-lg text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+	const defaults = ` box-border max-w-full w-full border-gray-400 transition-all duration-300 font-bold tracking-wider text-lg text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
 		valid ? 'border-green-500' : ''
 	} ${submit && !valid ? 'border-red-500' : ''}`;
 
 	var initials = 'border-2 px-3 py-3 rounded-full';
 	initials = generateClasses(initials, className);
+	const res = initials + defaults;
 	useEffect(() => {
 		value ? setValid(true) : setValid(false);
 	}, [value]);
 	return (
-		<div className="mb-4">
+		<div className="mb-4 box-border">
 			<div className="flex justify-between">
 				<label
 					htmlFor={id}
@@ -40,7 +41,7 @@ const Input = ({
 				autoComplete={autoComplete}
 				value={value}
 				onChange={onChange}
-				className={defaults + initials}
+				className={res}
 			/>
 		</div>
 	);
